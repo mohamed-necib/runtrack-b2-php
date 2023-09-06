@@ -6,13 +6,13 @@ function my_fizz_buzz(int $length): array
 
   for ($i = 1; $i <= $length; $i++) {
     if ($i % 3 == 0 && $i % 5 == 0) {
-      $result["FizzBuzz"];
+      $result[] = "FizzBuzz";
     } elseif ($i % 3 == 0) {
-      $result["Fizz"];
+      $result[] = "Fizz";
     } elseif ($i % 5 == 0) {
-      $result["Buzz"];
+      $result[] = "Buzz";
     } else {
-      $result[$i];
+      $result[] = $i;
     }
   }
   return $result;
