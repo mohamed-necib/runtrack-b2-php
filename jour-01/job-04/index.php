@@ -6,18 +6,17 @@ function my_fizz_buzz(int $length): array
 
   for ($i = 1; $i <= $length; $i++) {
     if ($i % 3 == 0 && $i % 5 == 0) {
-      array_push($result, "FizzBuzz");
+      $result["FizzBuzz"];
     } elseif ($i % 3 == 0) {
-      array_push($result, "Fizz");
+      $result["Fizz"];
     } elseif ($i % 5 == 0) {
-      array_push($result, "Buzz");
+      $result["Buzz"];
     } else {
-      array_push($result, $i);
+      $result[$i];
     }
   }
   return $result;
 }
 
-var_dump(
-  my_fizz_buzz(15)
-);
+
+my_fizz_buzz(15);
