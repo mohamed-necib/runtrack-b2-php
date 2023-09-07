@@ -41,24 +41,25 @@ function find_one_student(string $email): array
 
   <!-- Affichage des informations de l'élève recherché : -->
 
-  <h1>Informations de l'élève recherché</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Grade</th>
-        <th>Email</th>
-        <th>FullName</th>
-        <th>Date de Naissance</th>
-        <th>Genre</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php
-      if (isset($_GET['input-email-student'])) {
 
-        $student = find_one_student($_GET['input-email-student']);
-        foreach ($student as $information) : ?>
+  <?php
+  if (isset($_GET['input-email-student'])) {
+
+    $student = find_one_student($_GET['input-email-student']);
+    foreach ($student as $information) : ?>
+      <h1>Informations de l'élève recherché</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Grade</th>
+            <th>Email</th>
+            <th>FullName</th>
+            <th>Date de Naissance</th>
+            <th>Genre</th>
+          </tr>
+        </thead>
+        <tbody>
           <tr>
             <td><?= $information['id'] ?></td>
             <td><?= $information['grade_id'] ?></td>
@@ -67,16 +68,10 @@ function find_one_student(string $email): array
             <td><?= $information['birthdate'] ?></td>
             <td><?= $information['gender'] ?></td>
           </tr>
-        <?php endforeach; 
-      }
-      ?>
-      
-    </tbody>
-
-
-
-
-
+        </tbody>
+    <?php endforeach;
+  }
+    ?>
 
 </body>
 
