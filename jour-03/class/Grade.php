@@ -7,10 +7,10 @@
 // - year, Datetime
 
 class Grade {
-  public ?int $id;
-  public ?int $room_id;
-  public ?string $name;
-  public ?DateTime $year;
+  private ?int $id;
+  private ?int $room_id;
+  private ?string $name;
+  private ?DateTime $year;
 
   // constructeur
 
@@ -21,5 +21,40 @@ class Grade {
     $this->name = $name;
     $this->year = $year;
   }
+
+  // Création Setters et Getters pour chaques propriétés
+
+  public function setId(int $id) {
+    $this->id = $id;
+  }
+
+  public function getId(): ?int {
+    return $this->id;
+  }
+
+  public function setRoomId(int $room_id) {
+    $this->room_id = $room_id;
+  }
+
+  public function getRoomId(): ?int {
+    return $this->room_id;
+  }
+
+  public function setName(string $name) {
+    $this->name = $name;
+  }
+
+  public function getName(): ?string {
+    return $this->name;
+  }
+
+  public function setYear(Datetime $year) {
+    $this->year = $year;
+  }
+
+  public function getYear(): ?Datetime {
+    return $this->year;
+  }
+
 }
 ?>
